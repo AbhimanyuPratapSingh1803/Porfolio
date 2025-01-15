@@ -40,7 +40,7 @@ const Landing = () => {
                             <RevealText
                                 delayTime={0.009}
                                 duration={0.5}
-                                extraClass="text-sm min-[400px]:text-base mx-5 md:text-xl text-slate-700 pt-5 text-center"
+                                extraClass="text-sm min-[400px]:text-base mx-5 md:text-xl text-slate-500 pt-5 text-center"
                                 text={
                                     "Hi i'am Abhimanyu Pratap Singh, A Full Stack Developer"
                                 }
@@ -52,7 +52,7 @@ const Landing = () => {
                         </div>
                     </div>
                 </div>
-                {/* <div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-[#000319] to-transparent pointer-events-none"></div> */}
+                <div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-[#000319] to-transparent pointer-events-none"></div>
             </div>
         </AuroraBackground>
     );
