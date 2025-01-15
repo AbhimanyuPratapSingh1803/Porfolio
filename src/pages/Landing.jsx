@@ -7,7 +7,7 @@ import { AuroraBackground } from "../components/ui/Aurora-background";
 
 const Landing = () => {
     return (
-        <AuroraBackground>
+        // <AuroraBackground>
             <div className="h-[107vh] relative w-full">
                 <Navbar />
                 <div className="h-full w-full">
@@ -54,7 +54,7 @@ const Landing = () => {
                 </div>
                 <div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-[#000319] to-transparent pointer-events-none"></div>
             </div>
-        </AuroraBackground>
+        // </AuroraBackground>
     );
 };
 
