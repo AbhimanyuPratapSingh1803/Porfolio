@@ -22,8 +22,7 @@ const HorizontalScrollCarousel = () => {
 
     return (
         <section id="about" ref={targetRef} className="relative h-[400vh] bg-[#000319]">
-            <div className='sticky top-0 inset-0 bg-[url("/topography.svg")] text-white opacity-[0.07]'></div>
-            <div className="sticky top-0 flex flex-col gap-10 py-28 h-screen justify-center items-center overflow-hidden">
+            <div className="sticky top-0 flex flex-col gap-14 h-screen justify-center items-center overflow-hidden">
                 <RevealText
                     text="About Me"
                     duration={0.5}

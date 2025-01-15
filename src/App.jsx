@@ -97,7 +97,7 @@ function App() {
     const [isActive, setIsActive] = useState(false);
     return (
         <div ref={menu} className="bg-[#000319] text-white relative w-full">
-            <div className='absolute inset-0 bg-[url("/topography.svg")] text-white opacity-[0.07]'></div>
+            {/* <div className='absolute inset-0 bg-[url("/topography.svg")] text-white opacity-[0.07]'></div> */}
             <div>
                 <Burger isActive={isActive} setIsActive={setIsActive} show={showBurger} />
             </div>

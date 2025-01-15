@@ -2,22 +2,22 @@ import React, { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaGlobeAmericas } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Aos from "aos";
-import "aos/dist/aos.css";
+// import Aos from "aos";
+// import "aos/dist/aos.css";
 
 const ProjectCard = ({ imgSrc, techs, currTechs, Title, description, gitLink, liveLink }) => {
     const [hover, setHover] = useState(false);
 
-    useEffect(() => {
-        Aos.init({ once: true });
-    }, []);
+    // useEffect(() => {
+    //     Aos.init({ once: true });
+    // }, []);
 
     return (
         <div
-            data-aos="fade-up"
-            data-aos-easing="ease-in-out-sine"
-            data-aos-duration="500"
-            className="w-full min-[450px]:w-11/12 sm:w-3/4 md:w-2/3 lg:w-1/2 z-9"
+            // data-aos="fade-up"
+            // data-aos-easing="ease-in-out-sine"
+            // data-aos-duration="500"
+            // className="w-full min-[450px]:w-11/12 sm:w-3/4 md:w-2/3 lg:w-1/2 z-9"
         >
             <div
                 onMouseLeave={() => setHover(false)}
