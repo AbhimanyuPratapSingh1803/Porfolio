@@ -12,7 +12,7 @@ const Burger = ({isActive, setIsActive, show}) => {
                 <span className={`h-[2px] transition-all ${isActive ? "-rotate-45 -mt-[10px]" : ""} rounded-xl bg-black w-1/2`}></span>
             </button>
             <AnimatePresence mode='wait'>
-                {isActive && <Menu />}
+                {isActive && <Menu open={isActive} setOpen={setIsActive} />}
             </AnimatePresence>
         </div>
     )

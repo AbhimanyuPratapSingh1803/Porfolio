@@ -5,7 +5,7 @@ import RevealText from "../components/RevealText";
 const Projects = ({techs}) => {
 
     return (
-        <div id="projects" className="min-h-screen w-screen px-5 sm:px-8 lg:px-14 xl:px-32 flex flex-col items-center justify-start gap-20 pb-20 pt-20">
+        <div id="projects" className="min-h-screen w-screen px-5 sm:px-8 text-3xl lg:px-14 xl:px-32 flex flex-col items-center justify-start gap-20 pb-20 pt-20">
             <div class="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-[#000319] to-transparent pointer-events-none"></div>
             <div className="flex flex-col items-center justify-center sm:gap-4 min-[500px]:px-5">
                 <RevealText
@@ -16,12 +16,12 @@ const Projects = ({techs}) => {
                 <RevealText
                     text="Here are some of"
                     duration={0.5}
-                    extraClass="font-semibold flex sm:hidden text-4xl min-[500px]:text-5xl text-cyan-300"
+                    extraClass="font-semibold flex sm:hidden text-3xl min[360px]:text-4xl min-[500px]:text-5xl text-cyan-300"
                 />
                 <RevealText
                     text="My Projects"
                     duration={0.5}
-                    extraClass="font-semibold flex sm:hidden text-4xl min-[500px]:text-5xl text-cyan-300"
+                    extraClass="font-semibold flex sm:hidden text-3xl min[360px]:text-4xl min-[500px]:text-5xl text-cyan-300"
                 />
                 <RevealText
                     text="Featured projects developed with passion to drive results."

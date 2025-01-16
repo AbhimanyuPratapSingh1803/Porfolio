@@ -78,6 +78,14 @@ function App() {
             name: "Postman",
             img: "/postman.svg",
         },
+        {
+            name : "Python",
+            img : "/python.svg",
+        },
+        {
+            name : "MySQL",
+            img : "/mysql.svg",
+        }
     ];
     const menu = useRef(null);
     const { scrollYProgress } = useScroll({

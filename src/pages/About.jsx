@@ -22,7 +22,7 @@ const HorizontalScrollCarousel = () => {
 
     return (
         <section id="about" ref={targetRef} className="relative h-[400vh] bg-[#000319]">
-            <div className="sticky top-0 flex flex-col gap-14 h-screen justify-center items-center overflow-hidden">
+            <div className="sticky top-0 flex flex-col gap-10 h-screen justify-center items-center overflow-hidden">
                 <RevealText
                     text="About Me"
                     duration={0.5}
@@ -30,7 +30,7 @@ const HorizontalScrollCarousel = () => {
                     extraClass="font-semibold text-5xl text-cyan-300"
                 />
                 <motion.div className="px-5 min-[460px]:px-10 min-[685px]:px-16 min-[1045px]:px-32">
-                    <p className="text-[35px] min-[400px]:text-[40px] min-[460px]:text-[45px] sm:text-[55px] min-[920px]:text-[55px] min-[1300px]:text-7xl flex flex-wrap justify-center leading-[36px] min-[460px]:leading-[44px] sm:leading-[48px] min-[920px]:leading-[50px] font-semibold font-Bebas Neue 15 text-slate-100">
+                    <p className="text-[35px] min-[400px]:text-[40px] min-[480px]:text-[45px] sm:text-[55px] min-[920px]:text-[55px] min-[1300px]:text-7xl flex flex-wrap justify-center leading-[36px] min-[460px]:leading-[44px] sm:leading-[48px] min-[920px]:leading-[50px] font-semibold font-Bebas Neue 15 text-slate-100">
                         {words.map((word, i) => {
                             const start = i/words.length;
                             const end = start + 1/words.length;

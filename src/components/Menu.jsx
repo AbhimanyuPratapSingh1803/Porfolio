@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Para from './Para'
 import {motion} from 'framer-motion'
 
-const Menu = () => {
+const Menu = ({open, setOpen}) => {
     const items = [
         {
             name:"Home",
@@ -38,14 +38,14 @@ const Menu = () => {
             animate="enter" 
             exit="exit"
             className='flex fixed top-0 z-[19] right-0 h-screen w-full items-center justify-center'>
-            <div className='w-2/3 h-full backdrop-blur-lg'></div>
-            <div className='w-1/3 h-full py-20 px-5 bg-cyan-500 flex flex-col items-start justify-between'>
+            <div className='w-0 sm:w-1/4 md:w-2/5 min-[1000px]:w-1/2 xl:w-3/5 min-[1450px]:w-2/3 h-full backdrop-blur-lg'></div>
+            <div className='w-full sm:w-3/4 md:w-3/5 min-[1000px]:w-1/2 xl:w-2/5 min-[1450px]:w-1/3 h-full py-20 px-5 bg-cyan-500 flex flex-col items-start justify-between'>
                 <div className='w-full h-full flex flex-col justify-start items-start gap-4'>
                     <div className='w-full font-poppins text-black border-b-2 border-black'>
                         <span className='pb-5 font-medium'>Navigation</span>
                     </div>
                     {items.map((item, i) => (
-                        <MenuItem key={i} text={item.name} link={item.link} i={i}/>
+                        <MenuItem key={i} text={item.name} link={item.link} i={i} open={open} setOpen={setOpen}/>
                     ))}
                 </div>
                 <div className='flex flex-col items-center bg-cyan-500 justify-center w-full'>
