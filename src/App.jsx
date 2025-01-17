@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useState, useRef, useEffect } from "react";
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+import throttle from 'lodash/throttle';
 import Landing from "./pages/Landing";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
@@ -101,11 +102,16 @@ function App() {
     });
     
     useEffect(() => {
-        const unsubscribe = scrollYProgress.onChange((value) => {
-            setShowBurger(value > 0.05);
-        });
-        
-        return () => unsubscribe();
+        const throttledHandler = throttle((value) => {
+            setShowBurger(value > 0.09);
+        }, 100);
+    
+        const unsubscribe = scrollYProgress.onChange(throttledHandler);
+    
+        return () => {
+            unsubscribe();
+            throttledHandler.cancel();
+        };
     }, [scrollYProgress]);
 
     let links={
@@ -120,7 +126,7 @@ function App() {
         links.projects = projectsRef.current;
         links.techStack = techStackRef.current;
         links.footer = footerRef.current;
-      }, []);
+    }, []);
     
     
     return (

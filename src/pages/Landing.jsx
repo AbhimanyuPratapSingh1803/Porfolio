@@ -2,12 +2,11 @@ import React from "react";
 import RevealText from "../components/RevealText";
 import {easeInOut, motion} from "framer-motion";
 import CustomButton from "../components/CustomButton";
-import Navbar from "../components/Navbar";
 import { AuroraBackground } from "../components/ui/AuroraBackground";
 
 const Landing = ({links}) => {
     return (
-        <AuroraBackground>
+        // <AuroraBackground>
         <div id="home" className="h-[110vh] relative w-full">
             <div className=" h-full w-full">
                 <div className="flex h-full w-full items-center justify-center flex-col">
@@ -62,7 +61,7 @@ const Landing = ({links}) => {
             </div>
             <div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-[#000319] to-transparent pointer-events-none"></div>
         </div>
-        </AuroraBackground>
+        // </AuroraBackground>
     );
 };
 
