@@ -128,7 +128,7 @@ function App() {
             <ReactLenis
                 root
                 options={{
-                    lerp : 0.06,
+                    lerp : 0.05,
                 }}
             >
                 {/* <div className='absolute inset-0 bg-[url("/topography.svg")] text-white opacity-[0.07]'></div> */}
