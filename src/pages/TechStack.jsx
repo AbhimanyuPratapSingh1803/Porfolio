@@ -1,10 +1,10 @@
-import React from "react";
+import React, {forwardRef} from "react";
 import RevealText from "../components/RevealText";
 import Skill from "../components/Skill";
 
-const TechStack = ({ techs }) => {
+const TechStack = forwardRef(({ techs }, ref) => {
     return (
-        <div id="techStack" className="min-h-screen w-full py-20 px-5 min-[460px]:px-10 sm:px-16 lg:px-32 xl:px-36 2xl:px-52 flex-col items-center justify-center">
+        <div ref={ref} id="techStack" className="min-h-screen w-full py-20 px-5 min-[460px]:px-10 sm:px-16 lg:px-32 xl:px-36 2xl:px-52 flex-col items-center justify-center">
             <RevealText
                 text="Tech Stack and Technologies"
                 duration={0.5}
@@ -32,6 +32,6 @@ const TechStack = ({ techs }) => {
             </div>
         </div>
     );
-};
+});
 
 export default TechStack;

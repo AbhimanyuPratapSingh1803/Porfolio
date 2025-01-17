@@ -1,14 +1,14 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { useRef, forwardRef } from "react";
 import RevealText from "../components/RevealText";
 
-const About = () => {
+const About = forwardRef((props, ref) => {
     return (
-        <div className="bg-neutral-800">
+        <div ref={ref} className="bg-neutral-800">
             <HorizontalScrollCarousel />
         </div>
     );
-};
+});
 
 const HorizontalScrollCarousel = () => {
     const targetRef = useRef(null);

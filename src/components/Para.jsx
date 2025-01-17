@@ -1,16 +1,16 @@
 import React from "react";
 import { motion } from "motion/react";
 
-const Para = ({ text, extraClass }) => {
+const Para = ({ text, extraClass, link }) => {
     return (
-        FlipLink({ children : text, extraClass : extraClass })
+        FlipLink({ children : text, extraClass : extraClass, link:{link} })
     );
 };
 
 const DURATION = 0.25;
 const STAGGER = 0.025;
 
-const FlipLink = ({ children, extraClass }) => {
+const FlipLink = ({ children, extraClass, link }) => {
   return (
     <motion.p
       initial="initial"
@@ -18,6 +18,9 @@ const FlipLink = ({ children, extraClass }) => {
       className={`relative block ${extraClass} cursor-pointer font-poppins overflow-hidden whitespace-nowrap`}
       style={{
         lineHeight: 1.3,
+      }}
+      onClick={() => {
+        link.link.current.scrollIntoView({behavior: 'smooth'});
       }}
     >
       <div>

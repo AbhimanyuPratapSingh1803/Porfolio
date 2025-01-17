@@ -5,11 +5,10 @@ import CustomButton from "../components/CustomButton";
 import Navbar from "../components/Navbar";
 import { AuroraBackground } from "../components/ui/AuroraBackground";
 
-const Landing = () => {
+const Landing = ({links}) => {
     return (
         <AuroraBackground>
-        <div className="h-[110vh] relative w-full">
-            <Navbar />
+        <div id="home" className="h-[110vh] relative w-full">
             <div className=" h-full w-full">
                 <div className="flex h-full w-full items-center justify-center flex-col">
                     <div className="w-full">

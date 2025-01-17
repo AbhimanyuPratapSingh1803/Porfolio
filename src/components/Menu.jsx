@@ -8,7 +8,7 @@ const Menu = ({open, setOpen}) => {
     const items = [
         {
             name:"Home",
-            link:"/"
+            link:"#home"
         },
         {
             name:"About",
@@ -45,7 +45,7 @@ const Menu = ({open, setOpen}) => {
                         <span className='pb-5 font-medium'>Navigation</span>
                     </div>
                     {items.map((item, i) => (
-                        <MenuItem key={i} text={item.name} link={item.link} i={i} open={open} setOpen={setOpen}/>
+                        <MenuItem key={i} text={item.name} link={document.querySelector(`${item.link}`)} i={i} open={open} setOpen={setOpen}/>
                     ))}
                 </div>
                 <div className='flex flex-col items-center bg-cyan-500 justify-center w-full'>

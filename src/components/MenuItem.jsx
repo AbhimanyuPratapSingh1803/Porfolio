@@ -4,7 +4,7 @@ import Para from './Para';
 const MenuItem = ({text, link, open, setOpen}) => {
     const [active, setActive] = React.useState(false);
     return (
-        <a href={link} className="text-white text-sm font-medium mt-1">
+        // <a href={link} className="text-white text-sm font-medium mt-1">
             <motion.div 
                 variants={{
                     initial: {x: 80},
@@ -14,7 +14,10 @@ const MenuItem = ({text, link, open, setOpen}) => {
                 initial="initial"
                 animate="enter" 
                 exit="exit"
-                onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)} className='w-full flex items-center justify-center gap-3'>
+                onClick={() => {
+                    link.scrollIntoView({behavior: 'smooth'});
+                }}
+                onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)} className='w-full cursor-pointer flex items-center justify-start gap-3'>
                 <motion.div 
                     animate={active ? 'open' : 'closed'}
                     variants={{
@@ -27,7 +30,7 @@ const MenuItem = ({text, link, open, setOpen}) => {
                     <span>{text}</span>
                 </span>
             </motion.div>
-        </a>
+        // </a>
     )
 }
 

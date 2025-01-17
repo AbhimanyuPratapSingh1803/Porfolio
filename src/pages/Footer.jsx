@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import RevealText from '../components/RevealText'
 import CustomButton from '../components/CustomButton'
 import { LuMails } from "react-icons/lu";
@@ -7,9 +7,9 @@ import { FaGithubSquare } from "react-icons/fa";
 import { Link } from 'react-router-dom'
 import Para from '../components/Para';
 
-const Footer = () => {
+const Footer = forwardRef((props, ref) => {
     return (
-        <div id='contact' className='w-full relative h-[85vh] sm:h-screen flex-col p-10 items-center justify-center'>
+        <div ref={ref} id='contact' className='w-full relative h-[85vh] sm:h-screen flex-col p-10 items-center justify-center'>
             <div className='relative h-full z-5 w-full flex flex-col items-center justify-center bg-cyan-300 rounded-lg'>
                 <div className='mx-3 min-[500px]:mx-8 flex-col items-center justify-center'>
                     <RevealText
@@ -59,6 +59,6 @@ const Footer = () => {
             </div>
         </div>
     )
-}
+});
 
 export default Footer

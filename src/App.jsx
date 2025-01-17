@@ -1,12 +1,14 @@
 import "./App.css";
 import React, { useState, useRef, useEffect } from "react";
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import Landing from "./pages/Landing";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import TechStack from "./pages/TechStack";
 import Footer from "./pages/Footer";
 import Burger from "./components/Burger";
-import { useScroll, useMotionValueEvent, useTransform } from "framer-motion";
+import Navbar from "./components/Navbar";
+import { useScroll} from "framer-motion";
 
 function App() {
     const techs = [
@@ -79,41 +81,72 @@ function App() {
             img: "/postman.svg",
         },
         {
-            name : "Python",
-            img : "/python.svg",
+            name: "Python",
+            img: "/python.svg",
         },
         {
-            name : "MySQL",
-            img : "/mysql.svg",
-        }
+            name: "MySQL",
+            img: "/mysql.svg",
+        },
     ];
     const menu = useRef(null);
+    const [showBurger, setShowBurger] = useState(false);
+    const [isActive, setIsActive] = useState(false);
+    const aboutRef = useRef(null);
+    const projectsRef = useRef(null);
+    const techStackRef = useRef(null);
+    const footerRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: menu,
     });
-
-    const [showBurger, setShowBurger] = useState(false);
-
+    
     useEffect(() => {
         const unsubscribe = scrollYProgress.onChange((value) => {
             setShowBurger(value > 0.05);
         });
-
+        
         return () => unsubscribe();
     }, [scrollYProgress]);
 
-    const [isActive, setIsActive] = useState(false);
+    let links={
+        about: aboutRef,
+        projects: projectsRef,
+        techStack: techStackRef,
+        footer: footerRef
+    };
+
+    useEffect(() => {
+        links.about = aboutRef.current;
+        links.projects = projectsRef.current;
+        links.techStack = techStackRef.current;
+        links.footer = footerRef.current;
+      }, []);
+    
+    
     return (
         <div ref={menu} className="bg-[#000319] text-white relative w-full">
-            {/* <div className='absolute inset-0 bg-[url("/topography.svg")] text-white opacity-[0.07]'></div> */}
-            <div>
-                <Burger isActive={isActive} setIsActive={setIsActive} show={showBurger} />
-            </div>
-            <Landing />
-            <About />
-            <Projects techs={techs} />
-            <TechStack techs={techs} />
-            <Footer />
+            <ReactLenis
+                root
+                options={{
+                    lerp : 0.06,
+                }}
+            >
+                {/* <div className='absolute inset-0 bg-[url("/topography.svg")] text-white opacity-[0.07]'></div> */}
+                <Navbar links={links} />
+                <div>
+                    <Burger
+                        isActive={isActive}
+                        setIsActive={setIsActive}
+                        show={showBurger}
+                    />
+                </div>
+                <Landing
+                />
+                <About ref={aboutRef} />
+                <Projects ref={projectsRef} techs={techs} />
+                <TechStack ref={techStackRef} techs={techs} />
+                <Footer ref={footerRef} />
+            </ReactLenis>
         </div>
     );
 }

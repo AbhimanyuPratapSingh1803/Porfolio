@@ -1,11 +1,10 @@
-import React from "react";
+import React, {forwardRef} from "react";
 import ProjectCard from "../components/ProjectCard";
 import RevealText from "../components/RevealText";
 
-const Projects = ({techs}) => {
-
+const Projects = forwardRef(({techs}, ref) => {
     return (
-        <div id="projects" className="min-h-screen w-screen px-5 sm:px-8 text-3xl lg:px-14 xl:px-32 flex flex-col items-center justify-start gap-20 pb-20 pt-20">
+        <div ref={ref} id="projects" className="min-h-screen w-screen px-5 sm:px-8 text-3xl lg:px-14 xl:px-32 flex flex-col items-center justify-start gap-20 pb-20 pt-20">
             <div class="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-[#000319] to-transparent pointer-events-none"></div>
             <div className="flex flex-col items-center justify-center sm:gap-4 min-[500px]:px-5">
                 <RevealText
@@ -80,6 +79,6 @@ const Projects = ({techs}) => {
             </div>
         </div>
     );
-};
+});
 
 export default Projects;
