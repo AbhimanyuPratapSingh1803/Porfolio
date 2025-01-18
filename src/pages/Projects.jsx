@@ -60,10 +60,10 @@ const Projects = forwardRef(({techs}, ref) => {
                     <ProjectCard
                         techs={techs}
                         currTechs={[3,4,2,11]}
-                        imgSrc="/Curate.png"
+                        imgSrc="/Portfolio.png"
                         Title="Developer Portfolio"
-                        gitLink = "https://github.com/AbhimanyuPratapSingh1803/Curate"
-                        liveLink = "https://curate-theta-two.vercel.app/"
+                        gitLink = "https://github.com/AbhimanyuPratapSingh1803/Porfolio"
+                        liveLink = "https://porfolio-beta-drab.vercel.app/"
                         description="Personal portfolio meticulously crafted to showcase my creations."
                     />
                     <ProjectCard
