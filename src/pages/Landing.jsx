@@ -16,9 +16,9 @@ const Landing = ({ links }) => {
                         animate={{ opacity: 1,}}
                         transition={{ duration: 1.5, ease: easeInOut }}
                     >
-                        <div className="absolute z-0 animate-blob animation-delay-2000 bg-yellow-500 mix-blend-screen filter blur-2xl opacity-50 size-36 min-[400px]:size-44 min-[450px]:size-48 min-[500px]:size-56 sm:size-64 md:size-72 rounded-full top-1/4 left-[7%] min-[450px]:left-[15%] md:left-[25%]"></div>
-                        <div className="absolute z-0 animate-blob animation-delay-4000 bg-orange-400 mix-blend-screen filter blur-2xl opacity-50 size-36 min-[400px]:size-44 min-[450px]:size-48 min-[500px]:size-56 sm:size-64 md:size-72 rounded-full top-[25%] left-[35%] md:left-[40%]"></div>
-                        <div className="absolute z-0 animate-blob bg-blue-500 mix-blend-screen filter blur-2xl opacity-50 size-36 min-[400px]:size-44 min-[450px]:size-48 min-[500px]:size-56 sm:size-64 md:size-72 rounded-full top-1/3 left-[45%] min-[450px]:left-[45%] min-[500px]:left-[50%] md:left-[55%]"></div>
+                        <div className="absolute z-0 animate-blob animation-delay-2000 bg-yellow-500 mix-blend-screen filter blur-[32px] sm:blur-2xl opacity-50 size-36 min-[400px]:size-44 min-[450px]:size-48 min-[500px]:size-56 sm:size-64 md:size-72 rounded-full top-1/4 left-[7%] min-[450px]:left-[15%] md:left-[25%]"></div>
+                        <div className="absolute z-0 animate-blob animation-delay-4000 bg-orange-400 mix-blend-screen filter blur-[32px] sm:blur-2xl opacity-50 size-36 min-[400px]:size-44 min-[450px]:size-48 min-[500px]:size-56 sm:size-64 md:size-72 rounded-full top-[25%] left-[35%] md:left-[40%]"></div>
+                        <div className="absolute z-0 animate-blob bg-blue-500 mix-blend-screen filter blur-[32px] sm:blur-2xl opacity-50 size-36 min-[400px]:size-44 min-[450px]:size-48 min-[500px]:size-56 sm:size-64 md:size-72 rounded-full top-1/3 left-[45%] min-[450px]:left-[45%] min-[500px]:left-[50%] md:left-[55%]"></div>
                     </motion.div>
                     <div className="w-full absolute z-1">
                         <motion.div
