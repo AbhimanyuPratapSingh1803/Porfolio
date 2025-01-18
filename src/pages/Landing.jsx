@@ -3,6 +3,7 @@ import RevealText from "../components/RevealText";
 import {easeInOut, motion} from "framer-motion";
 import CustomButton from "../components/CustomButton";
 import { AuroraBackground } from "../components/ui/AuroraBackground";
+import { Link } from "react-router-dom";
 
 const Landing = ({links}) => {
     return (
@@ -51,10 +52,12 @@ const Landing = ({links}) => {
                                 <p className="text-white font-bold text-2xl min-[400px]:text-[33px] min-[550px]:text-4xl sm:text-5xl text-center md:text-[38px] md:leading-[45px] lg:text-5xl xl:text-6xl font-poppins mx-5 min-[550px]:mx-10">Turning Imagination and Ideas into</p>
                                 <p className="text-cyan-300 font-bold text-3xl min-[400px]:text-4xl min-[550px]:text-5xl sm:text-6xl text-center md:text-[38px] md:leading-[45px] lg:text-5xl xl:text-6xl font-poppins mx-5 min-[550px]:mx-10 mb-5">Real Life Products.</p>
                                 <p className="text-slate-500 mx-5 min-[550px]:mx-10 font-poppins text-center text-xs min-[400px]:text-sm min-[550px]:text-base sm:text-lg xl:text-xl font-semibold">Hi i'am Abhimanyu Pratap Singh, A Full Stack Developer</p>
-                                <CustomButton
-                                    text="Let's Connect"
-                                    extraClass="mx-auto mt-5 min-[640px]:mt-10 max-[400px]:text-sm w-[150px] min-[400px]:w-[190px] md:w-[200px] py-2 sm:py-3 px-2 sm:px-10 text-black bg-cyan-300"
-                                />
+                                <Link to={"mailto:abhimanyusingh1533@gmail.com"}>
+                                    <CustomButton
+                                        text="Let's Connect"
+                                        extraClass="mx-auto mt-5 min-[640px]:mt-10 max-[400px]:text-sm w-[150px] min-[400px]:w-[190px] md:w-[200px] py-2 sm:py-3 px-2 sm:px-10 text-black bg-cyan-300"
+                                    />
+                                </Link>
                             </motion.div>
                     </div>
                 </div>

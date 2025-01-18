@@ -46,14 +46,18 @@ const Footer = forwardRef((props, ref) => {
                         <p>All Rights Reserved</p>
                     </div>
                     <div className='flex items-center justify-center gap-3 sm:gap-7'>
-                        <div className='flex items-center cursor-pointer justify-center gap-2'>
-                            <FaLinkedin className='text-3xl'/>
-                            <Para text="LinkedIn" extraClass="font-semibold hidden sm:block text-lg"/>
-                        </div>
-                        <div className='flex relative cursor-pointer items-center justify-center gap-2'>
-                            <FaGithubSquare className='text-3xl'/>
-                            <Para text="GitHub" extraClass="font-semibold hidden sm:block text-lg"/>
-                        </div>
+                        <Link to={"https://www.linkedin.com/in/abhimanyu-pratap-singh-254127263/"}>
+                            <div className='flex items-center cursor-pointer justify-center gap-2'>
+                                <FaLinkedin className='text-3xl'/>
+                                <Para text="LinkedIn" extraClass="font-semibold hidden sm:block text-lg"/>
+                            </div>
+                        </Link>
+                        <Link to={"https://github.com/AbhimanyuPratapSingh1803"}>
+                            <div className='flex relative cursor-pointer items-center justify-center gap-2'>
+                                <FaGithubSquare className='text-3xl'/>
+                                <Para text="GitHub" extraClass="font-semibold hidden sm:block text-lg"/>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>
